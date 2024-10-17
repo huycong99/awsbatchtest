@@ -1,0 +1,14 @@
+C:\Users\Admin\source\repos\TestAWSbatch\TestAWSbatch\bin\Debug\net6.0\TestAWSbatch.exe
+C:\Users\Admin\source\repos\TestAWSbatch\TestAWSbatch\bin\Debug\net6.0\TestAWSbatch.deps.json
+C:\Users\Admin\source\repos\TestAWSbatch\TestAWSbatch\bin\Debug\net6.0\TestAWSbatch.runtimeconfig.json
+C:\Users\Admin\source\repos\TestAWSbatch\TestAWSbatch\bin\Debug\net6.0\TestAWSbatch.dll
+C:\Users\Admin\source\repos\TestAWSbatch\TestAWSbatch\bin\Debug\net6.0\TestAWSbatch.pdb
+C:\Users\Admin\source\repos\TestAWSbatch\TestAWSbatch\obj\Debug\net6.0\TestAWSbatch.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\source\repos\TestAWSbatch\TestAWSbatch\obj\Debug\net6.0\TestAWSbatch.AssemblyInfoInputs.cache
+C:\Users\Admin\source\repos\TestAWSbatch\TestAWSbatch\obj\Debug\net6.0\TestAWSbatch.AssemblyInfo.cs
+C:\Users\Admin\source\repos\TestAWSbatch\TestAWSbatch\obj\Debug\net6.0\TestAWSbatch.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\TestAWSbatch\TestAWSbatch\obj\Debug\net6.0\TestAWSbatch.dll
+C:\Users\Admin\source\repos\TestAWSbatch\TestAWSbatch\obj\Debug\net6.0\refint\TestAWSbatch.dll
+C:\Users\Admin\source\repos\TestAWSbatch\TestAWSbatch\obj\Debug\net6.0\TestAWSbatch.pdb
+C:\Users\Admin\source\repos\TestAWSbatch\TestAWSbatch\obj\Debug\net6.0\TestAWSbatch.genruntimeconfig.cache
+C:\Users\Admin\source\repos\TestAWSbatch\TestAWSbatch\obj\Debug\net6.0\ref\TestAWSbatch.dll

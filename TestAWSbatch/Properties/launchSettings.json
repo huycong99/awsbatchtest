@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "TestAWSbatch": {
+      "commandName": "Project",
+      "commandLineArgs": "\"alo\""
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}

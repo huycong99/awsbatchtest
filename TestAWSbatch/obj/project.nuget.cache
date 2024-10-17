@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "bsyESttJ2h88j5zF4EPy1iThWw2JY7r9X4LI/45PLANLqlQ54uWUQb0uyHGAbfU+V1UOm2QP1SMV7H2ysumoWw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Admin\\source\\repos\\TestAWSbatch\\TestAWSbatch\\TestAWSbatch.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.19.4\\microsoft.visualstudio.azure.containers.tools.targets.1.19.4.nupkg.sha512"
+  ],
+  "logs": []
+}

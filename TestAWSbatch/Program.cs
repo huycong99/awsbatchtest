@@ -6,7 +6,7 @@
         {
             if(args.Length==0)
             {
-                Console.WriteLine("args not found alo change something");
+                Console.WriteLine("args not found alo change something  j");
             }
             else 
             {

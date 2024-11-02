@@ -12,6 +12,16 @@ pipeline {
                 
             }
         }
+        stage('Install aws cli'){
+            steps{
+                container('kaniko'){
+                    sh '''
+                      sudo apt update
+                      sudo apt install awscli -y
+                    '''
+                }
+            }
+        }
         
         stage('Kaniko build image'){
            steps {

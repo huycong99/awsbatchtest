@@ -17,6 +17,7 @@ pipeline {
                container('kaniko'){
                     sh 'echo "hello to kaniko container"'
                     sh 'cd TestAWSbatch'
+                    sh 'ls'
                     sh '''
                     /kaniko/executor --context `pwd` --destination 056148863073.dkr.ecr.us-east-1.amazonaws.com/myecrtest:latest
                     '''

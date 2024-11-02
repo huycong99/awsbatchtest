@@ -24,8 +24,6 @@ pipeline {
         ]) {
             
             sh 'echo "Building Docker image with Kaniko"'
-            sh 'mkdir -p /kaniko/.docker'
-            sh 'echo "{\"credsStore\":\"ecr-login\"}" > /kaniko/.docker/config.json'
             sh 'cat /kaniko/.docker/config.json'
             sh 'ls'
             

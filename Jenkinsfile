@@ -19,7 +19,7 @@ pipeline {
                     sh 'cd TestAWSbatch'
                     sh 'ls'
                     sh '''
-                    /kaniko/executor --context `pwd` --destination 056148863073.dkr.ecr.us-east-1.amazonaws.com/myecrtest:latest
+                    /kaniko/executor --context `pwd` --dockerfile /home/jenkins/agent/workspace/CI_pipeline/TestAWSbatch --destination 056148863073.dkr.ecr.us-east-1.amazonaws.com/myecrtest:latest
                     '''
                }
                

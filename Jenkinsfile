@@ -19,12 +19,7 @@ pipeline {
             sh 'echo "Building Docker image with Kaniko"'
             sh 'cd TestAWSbatch'
             sh 'ls'
-            sh '''
-                /kaniko/executor --context `pwd` \
-                                 --dockerfile /home/jenkins/agent/workspace/CI_pipeline/TestAWSbatch/Dockerfile \
-                                 --destination 056148863073.dkr.ecr.us-east-1.amazonaws.com/myecrtest:latest \
-                                 --no-push
-            '''
+           
         }
     }
 }

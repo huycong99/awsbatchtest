@@ -24,8 +24,10 @@ pipeline {
         ]) {
             
             sh 'echo "Building Docker image with Kaniko"'
+            sh 'mkdir -p /kaniko/.docker'
             sh 'echo "{\"credsStore\":\"ecr-login\"}" > /kaniko/.docker/config.json'
             sh 'ls'
+            
             sh '''
                 /kaniko/executor --context `pwd` --dockerfile /home/jenkins/agent/workspace/CI_pipeline/TestAWSbatch/Dockerfile --destination 056148863073.dkr.ecr.us-east-1.amazonaws.com/myecrtest:latest
                   

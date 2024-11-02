@@ -16,8 +16,9 @@ pipeline {
             steps{
                 container('kaniko'){
                     sh '''
-                       apt update
-                       apt install awscli -y
+                       apk update
+                       apk add --no-cache python3 py3-pip
+                       pip install --no-cache-dir awscli
                     '''
                 }
             }

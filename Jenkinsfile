@@ -30,6 +30,7 @@ pipeline {
                         sh '''
                         /kaniko/executor --context `pwd` --dockerfile /home/jenkins/agent/workspace/CI_pipeline/TestAWSbatch/Dockerfile --destination 056148863073.dkr.ecr.us-east-1.amazonaws.com/myecrtest:latest
                         '''
+                        
                     }     
                }
                

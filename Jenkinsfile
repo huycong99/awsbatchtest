@@ -24,7 +24,6 @@ pipeline {
         ]) {
             
             sh 'echo "Building Docker image with Kaniko"'
-            sh 'cat /kaniko/.docker/config.json'
             sh 'ls'
             
             sh '''

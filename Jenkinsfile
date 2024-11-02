@@ -12,17 +12,6 @@ pipeline {
                 
             }
         }
-        stage('Install aws cli'){
-            steps{
-                container('kaniko'){
-                    sh '''
-                       apk update
-                       apk add --no-cache python3 py3-pip
-                       pip install --no-cache-dir awscli
-                    '''
-                }
-            }
-        }
         
         stage('Kaniko build image'){
            steps {
@@ -34,7 +23,7 @@ pipeline {
                     secretKeyVariable: 'AWS_SECRET_ACCESS_KEY'
                     ]]) {
 
-                        sh 'aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 056148863073.dkr.ecr.us-east-1.amazonaws.com'
+                        aws 'ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 056148863073.dkr.ecr.us-east-1.amazonaws.com'
                         sh 'echo "hello to kaniko container"'
                         sh 'cd TestAWSbatch'
                         sh 'ls'

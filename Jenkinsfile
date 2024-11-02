@@ -16,6 +16,7 @@ pipeline {
            steps {
                container('kaniko'){
                     sh 'echo "hello to kaniko container"'
+                    sh 'ls'
                     sh '''
                     /kaniko/executor --context `pwd` --destination 056148863073.dkr.ecr.us-east-1.amazonaws.com/myecrtest:latest
                     '''

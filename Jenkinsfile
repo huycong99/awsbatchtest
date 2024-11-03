@@ -26,6 +26,7 @@ pipeline {
             sh 'echo "Building Docker image with Kaniko"'
             sh 'ls'
             sh 'cd /cache'
+            sh 'echo "Hello, World!" | sudo tee /cache/example.txt'
             sh 'ls'
             sh 'mkdir alo'
             

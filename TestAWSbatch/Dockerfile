@@ -8,12 +8,11 @@ WORKDIR /src
 COPY ["TestAWSbatch/TestAWSbatch.csproj", "TestAWSbatch/"]
 RUN dotnet restore "TestAWSbatch/TestAWSbatch.csproj"
 COPY . .
-RUN mkdir /src/TestAWSbatch
 WORKDIR "/src/TestAWSbatch"
-RUN dotnet build "TestAWSbatch.csproj" -c Release -o /app/build /p:ContinuousIntegrationBuild=true
+# RUN dotnet build "TestAWSbatch.csproj" -c Release -o /app/build 
 
 FROM build AS publish
-RUN dotnet publish "TestAWSbatch.csproj" -c Release -o /app/publish /p:ContinuousIntegrationBuild=true /p:UseAppHost=false
+RUN dotnet publish --no-restore "TestAWSbatch.csproj" -c Release -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
 WORKDIR /app

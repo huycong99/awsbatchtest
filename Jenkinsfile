@@ -25,6 +25,7 @@ pipeline {
              accessKeyVariable: 'AWS_ACCESS_KEY_ID', 
              secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']
         ]) {
+            sh 'chmod -R 777 /kaniko'
 
             writeFile file: '/kaniko/.docker/config.json', text: DOCKER_CONFIG_JSON
             sh 'echo "Building Docker image with Kaniko"'

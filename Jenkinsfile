@@ -3,6 +3,9 @@ pipeline {
     agent {
       label "kubeagent"
     }
+    environment {
+        DOCKER_CONFIG_JSON = credentials('DOCKER_CONFIG_JSON')  
+    }
     stages {
         stage('Git clone') {
             steps {
@@ -22,7 +25,7 @@ pipeline {
              accessKeyVariable: 'AWS_ACCESS_KEY_ID', 
              secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']
         ]) {
-            
+
             writeFile file: '/kaniko/.docker/config.json', text: DOCKER_CONFIG_JSON
             sh 'echo "Building Docker image with Kaniko"'
             sh 'ls'

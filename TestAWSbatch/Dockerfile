@@ -5,11 +5,12 @@ WORKDIR /app
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
+RUN mkdir TestAWSbatch
 COPY ["TestAWSbatch/TestAWSbatch.csproj", "TestAWSbatch/"]
 RUN dotnet restore "TestAWSbatch/TestAWSbatch.csproj"
 COPY . .
 WORKDIR "/src/TestAWSbatch"
-# RUN dotnet build "TestAWSbatch.csproj" -c Release -o /app/build 
+RUN dotnet build "TestAWSbatch.csproj" -c Release -o /app/build 
 
 FROM build AS publish
 RUN dotnet publish --no-restore "TestAWSbatch.csproj" -c Release -o /app/publish /p:UseAppHost=false

@@ -35,7 +35,7 @@ pipeline {
 
 
             sh '''
-                /kaniko/executor --context `pwd` --dockerfile /home/jenkins/agent/workspace/CI_pipeline/TestAWSbatch/Dockerfile --build-arg AWS_REGION=$AWS_REGION --build-arg AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID --build-arg AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY --destination 056148863073.dkr.ecr.us-east-1.amazonaws.com/myecrtest:latest --cache=true --cache-dir=/cache --cache-repo=huycong011099/kaniko-cache --verbosity=debug
+                /kaniko/executor --context `pwd` --dockerfile /home/jenkins/agent/workspace/CI_pipeline/TestAWSbatch/Dockerfile --build-arg AWS_REGION=$AWS_REGION --build-arg AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID --build-arg AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY --destination 056148863073.dkr.ecr.us-east-1.amazonaws.com/myecrtest:latest --cache=true --cache-dir=/cache --cache-repo=huycong011099/kaniko-cache
                   
             '''
             

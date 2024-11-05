@@ -10,10 +10,10 @@ COPY ["TestAWSbatch/TestAWSbatch.csproj", "TestAWSbatch/"]
 RUN dotnet restore "TestAWSbatch/TestAWSbatch.csproj"
 COPY . .
 WORKDIR "/src/TestAWSbatch"
-RUN dotnet build "TestAWSbatch.csproj" -c Release
+RUN dotnet build "TestAWSbatch.csproj" -c Release --no-restore
 
 FROM build AS publish
-RUN dotnet publish --no-restore "TestAWSbatch.csproj" -c Release -o /app/publish /p:UseAppHost=false
+RUN dotnet publish --no-restore "TestAWSbatch.csproj" -c Release -o /app/publish /p:UseAppHost=false --no-restore
 
 FROM base AS final
 WORKDIR /app
